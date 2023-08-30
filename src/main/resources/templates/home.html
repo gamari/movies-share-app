@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html>
   <head>
-    <title>Spring Security Example</title>
+    <title>Home</title>
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <h1>User List</h1>
 
-    <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Email</th>
+      </tr>
+      <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.password}"></td>
+        <td th:text="${user.email}"></td>
+      </tr>
+    </table>
   </body>
 </html>
