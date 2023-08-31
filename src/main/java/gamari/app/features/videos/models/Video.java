@@ -2,12 +2,14 @@ package gamari.app.features.videos.models;
 
 import java.sql.Date;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class Video {
-    /** TODO UUIDにする。 */
     private String id;
+
+    @NotNull
     private String title;
     private String description;
     private Double price;
