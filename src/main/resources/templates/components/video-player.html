@@ -1,0 +1,24 @@
+<!-- TODO コンポーネント化する！！ -->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+  </head>
+
+  <body>
+    <div th:fragment="videoPlayer (videoUrl)">
+      <video id="my-video" class="video-js" controls>
+        <source th:src="${videoUrl}" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- 初期化スクリプト -->
+    <script>
+      var player = videojs("my-video");
+      player.on("ready", function () {
+        // カスタマイズ処理
+      });
+    </script>
+  </body>
+</html>

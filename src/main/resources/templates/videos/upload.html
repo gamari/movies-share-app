@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>動画アップロード画面</title>
+  </head>
+  <body>
+    <form method="post" action="/videos/upload" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Title" />
+      <input type="text" name="description" placeholder="Description" />
+      <input type="number" name="price" placeholder="Price" />
+
+      <!-- イメージ -->
+      <!-- <input type="file" name="previewImage" /> -->
+
+      <!-- ビデオ -->
+      <input type="file" name="videoFile" />
+      <button type="submit">Upload</button>
+    </form>
+
+    <a href="/videos/1234">動画を見る</a>
+  </body>
+</html>
